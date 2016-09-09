@@ -9,9 +9,9 @@ const sequelize = new Sequelize('bucket', 'kate', 'null', {
 
 var User = sequelize.define('users', {
 	_id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true},
-	id: Sequelize.INTEGER,
 	username: Sequelize.STRING,
 	profilepic: Sequelize.STRING,
+  bio: Sequelize.STRING,
   // createdAt: Sequelize.literal('NOW()'),
   // updatedAt: Sequelize.literal('NOW()')
 }, {
