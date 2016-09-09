@@ -1,5 +1,11 @@
+<!--Enter text to filter activities-->
+<form ng-submit='filterText'>
+	<input type='text' ng-model='filterBy'></input>
+	<input type='submit'></input>
+</form>
+
 <!--repeat is list of activity names-->
 <div class="list" ng-repeat="key in activities | orderBy: sortType | filter: filterBy">
-  <p> {{key.activityName}}</p> 
-
-</div
+  <!--clicking activity adds activity to current user's profile-->
+  <p ng-click='ACTIVITYDETAILFUNC'> {{key.activityName}}</p> 
+</div>
