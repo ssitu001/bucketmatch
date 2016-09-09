@@ -4,9 +4,14 @@ angular
 
 function userFactory($http) {
   let userData = [];
+  let user = '';
 
-  userData.fetch = function (data) {
-    return $http.get(ADDURL + '?user=' + data);
+  userData.fetch = function () {
+    return $http.get(ADDURL + '?user=' + user);
   };
+
+  userData.updateUser = function (data) {
+    user = data;
+  }
   return userData;
 }

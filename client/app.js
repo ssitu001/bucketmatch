@@ -1,5 +1,5 @@
 const App = angular
-  .module('myApp', ['ngRoute', 'UserProfileController', 'ActivitiesController']);
+  .module('myApp', ['ngRoute', 'UserProfileController', 'ActivitiesController', 'LoginController']);
 
 App.config(configFunction);
 

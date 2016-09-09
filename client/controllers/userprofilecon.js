@@ -1,8 +1,8 @@
 angular
-  .module('UserProfileController', ['ngRoute', 'EventFactory'])
+  .module('UserProfileController', ['ngRoute', 'EventFactory', 'UserFactory'])
   .controller('UserProfileController', usercontroller)
 
-function usercontroller($scope, $location, $http, EventFactory) {
+function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   $scope.image = undefined;
   $scope.activities = [];
   $scope.completed = [];
@@ -17,4 +17,14 @@ function usercontroller($scope, $location, $http, EventFactory) {
     EventFactory.updateUser(this.user);
     $location.path('addActivity');
   };
+
+  function loadPage() {
+    UserFactory.fetch().then((req, res) => {
+      $scope.image = res.body[0].image;
+      $scope.activities = ?;
+      $scope.completed = ?;
+      $scope.description = res.body[0].desc;
+    })
+  }
+  loadPage();
 }
