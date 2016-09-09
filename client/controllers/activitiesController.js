@@ -2,13 +2,12 @@ angular
   .module('ActivitiesController', ['ngRoute', 'EventFactory', 'ActivityFactory', 'UserFactory'])
   .controller('activitiescontroller', ['$scope', '$location']);
 
-function activitiescontroller($scope, $location, EventFactory, ActivityFactory, UserFactory) {
+function activitiescontroller($scope, $location, EventFactory, UserFactory) {
 
-  //$scope.users = [];
 
-  $scope.userSelectView = function () {
-    // function to load user view.
-  };
+  // $scope.userSelectView = function () {
+  //   // function to load user view.
+  // };
 
   //use fetch from eventFactory that gets all users info.
   function getUsers() {
@@ -20,10 +19,14 @@ function activitiescontroller($scope, $location, EventFactory, ActivityFactory, 
 	};
   $scope.users = getUsers();
   
-  //get's userProfile when you click on the user
-  function getUserProfile() {
-    UserFactory.getUser()
+  //get's other user's profile when you click on the user
+  $scope.getOtherUserProfile = function() {
+    //use userFactory updateUser to get data
+    UserFactory.updateUser(this.user); 
+    //relocate to profile page
+    $location.path('profile');
   }
+
 
 
 };
