@@ -20,4 +20,6 @@ function eventFactory($http) {
   event.fetchActivities = function (data) {
     return $http.get(ADDURL + '?search=' + data)
   };
+
+  return event;
 }
