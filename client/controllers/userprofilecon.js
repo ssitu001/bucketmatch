@@ -1,8 +1,8 @@
 angular
-  .module('UserProfileController', ['ngRoute', 'EventFactory', 'ActivityFactory'])
+  .module('UserProfileController', ['ngRoute', 'EventFactory'])
   .controller('UserProfileController', usercontroller)
 
-function usercontroller($scope, $location, EventFactory, ActivityFactory) {
+function usercontroller($scope, $location, $http, EventFactory) {
   $scope.image = undefined;
   $scope.activities = [];
   $scope.completed = [];
@@ -14,7 +14,7 @@ function usercontroller($scope, $location, EventFactory, ActivityFactory) {
   };
 
   $scope.addActivity = function () {
-    ActivityFactory.updateUser(this.user);
+    EventFactory.updateUser(this.user);
     $location.path('addActivity');
   };
 }
