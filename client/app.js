@@ -10,7 +10,11 @@ function configFunction($routeProvider, $locationProvider) {
       controller: 'UserProfileController',
     })
     .when('/activities', {
-    templateUrl: './partials/activitieslist.html',
+    templateUrl: './partials/activitiesusers.html',
     controller: 'ActivitiesController',
+    })
+    .when('/addActivity', {
+      templateUrl: './partials/addactivity.html',
+      controller: 'ActivitiesController',
     });
 }
