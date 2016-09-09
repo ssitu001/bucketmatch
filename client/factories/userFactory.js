@@ -8,4 +8,5 @@ function userFactory($http) {
   userData.fetch = function (data) {
     return $http.get(ADDURL + '?user=' + data);
   };
+  return userData;
 }
