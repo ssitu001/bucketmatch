@@ -1,0 +1,18 @@
+<header>
+  <img ng-src={{image}} />
+  <h1>My Bucket List</h1>
+</header>
+<div class='list'>
+  <h3>Todo Dreams</h3>
+  <div ng-click='ADDFUNC' ng-repeat='activity in activities'>
+</div>
+<div class='list'>
+  <h3>Achieved Dreams</h3>
+  <div ng-repeat="activity in completed">
+</div>
+<div class='desc'>
+  <p ng-model='description'></p>
+</div>
+<div ng-click="ADDFUNC">
+  <p>Add Dream</p>
+</div>
