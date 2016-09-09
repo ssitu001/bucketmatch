@@ -12,5 +12,6 @@ function activitiescontroller($scope, $location, EventFactory) {
       $scope.activities = res.data;
     });
   };
+
 }
 
