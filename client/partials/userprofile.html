@@ -4,7 +4,7 @@
 </header>
 <div class='list'>
   <h3>Todo Dreams</h3>
-  <div ng-click='ADDFUNC' ng-repeat='activity in activities'>
+  <div ng-click='activityView()' ng-repeat='activity in activities'>
 </div>
 <div class='list'>
   <h3>Achieved Dreams</h3>
@@ -13,6 +13,6 @@
 <div class='desc'>
   <p ng-model='description'></p>
 </div>
-<div ng-click="ADDFUNC">
+<div ng-click="addActivity()">
   <p>Add Dream</p>
 </div>
