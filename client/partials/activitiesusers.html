@@ -1,4 +1,9 @@
-<div class="list" ng-repeat="">
+
+<a ng-href='/#/profile'>Profile</a>
+<h1> Here are your matches </h1>
+<h2> {{}}
+
+<div class="list" ng-repeat="user in users">
   <!--clicking person routes to user's profile-->
-  <p ng-click='USERPROFILEVIEW'> {{key.activityName}}</p> 
+  <p ng-click='getUserProfile()'> {{userimage}}</p> 
 </div>
