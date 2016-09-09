@@ -6,6 +6,7 @@ function activitiescontroller($scope, $location, EventFactory) {
     // function to load user view.
   };
   $scope.activityname = 'test';
+  $scope.activitydesc = 'rsekjr';
   $scope.fetch = function() {
 	  ActivityFactory.fetch().then(function (res){
 	  	$scope.activities = res.data;	
