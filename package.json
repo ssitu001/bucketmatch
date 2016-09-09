@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sneakykate/bucketmatch#readme",
   "dependencies": {
+    "angular": "^1.5.8",
     "express": "^4.14.0"
   },
   "devDependencies": {
