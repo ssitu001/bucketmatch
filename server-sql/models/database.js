@@ -45,4 +45,4 @@ sequelize.sync()
   // whooops
 })
 
-	module.exports = {sequelize: sequelize, User: User}
+module.exports = { sequelize: sequelize, User: User }
