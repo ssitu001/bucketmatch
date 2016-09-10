@@ -7,6 +7,7 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   $scope.activities = [];
   $scope.completed = [];
   $scope.description = '';
+  $scope.username = '';
 
   $scope.activityView = function () {
     EventFactory.updateEvent(this.activity);
@@ -19,11 +20,12 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   };
 
   function loadPage() {
-    UserFactory.fetch().then((req, res) => {
+    UserFactory.fetch().then((data) => {
       $scope.image = res.body[0].image;
       $scope.activities = ?;
       $scope.completed = ?;
       $scope.description = res.body[0].desc;
+      $scope.username = res.body[0].username;
     })
   }
   loadPage();
