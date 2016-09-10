@@ -19,8 +19,13 @@ function eventFactory($http) {
   };
 
   obj.fetchActivities = function () {
-    return $http.get(ADDURL + '?search=' + user);
+    return $http.get('http://localhost:3000/activities');
   };
 
+  obj.addUserToEvent = function (data) {
+    data.userid = user;
+    console.log(data);
+    return $http.post('localhost:3000/useractivity/add', data);
+  };
   return obj;
 }

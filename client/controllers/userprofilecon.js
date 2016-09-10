@@ -7,7 +7,7 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   $scope.activities = [];
   $scope.completed = [];
   $scope.description = '';
-  $scope.username = '';
+  $scope.userid = '';
 
   $scope.activityView = function () {
     EventFactory.updateEvent(this.activity);
@@ -15,7 +15,7 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   };
 
   $scope.addActivity = function () {
-    EventFactory.updateUser(this.user);
+    EventFactory.updateUser($scope.userid);
     $location.path('addActivity');
   };
 
@@ -25,11 +25,12 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
         UserFactory.error('Sorry incorrect username or password.  Please try again')
         $location.path('/');
       }
-      $scope.image = data.data.profilepic;
-      $scope.activities = '';
+      $scope.image = data.data.user.profilepic;
+      $scope.activities = data.activities;
       $scope.completed = '';
-      $scope.description = data.data.bio;
-    })
+      $scope.description = data.data.user.bio;
+      $scope.userid= data.data.user._id;
+    });
   }
   loadPage();
 }

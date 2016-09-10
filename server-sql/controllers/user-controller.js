@@ -38,7 +38,7 @@ function show(req, res, next) {
 
 function conn(req, res, next){
     User.sequelize.query('SELECT "actname" from "activities" join "useractivities" on ("useractivities"."activityId" = "activities"."_id") join "users" on ("users"."_id" = "useractivities"."userId") where "username" =\'' + req.params.username + '\'').then(function(data){
-      let output = {activities: data[0], user: req.user};
+      var output = {activities: data[0], user: req.user};
       res.json(output);
     })
   }
