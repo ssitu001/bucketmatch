@@ -11,5 +11,53 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body .navbar .navbar-inner ul.nav>li>a {
-  padding: 7px 10px;
+  padding: 7px 10px; 
+}
+
+body, html {
+  background-color: rgba(35, 35, 50, 1);
+  height: 100%
+}
+
+h2{
+  font-size: 1.8em;
+  margin-left: 6px;
+}
+
+.sitename{
+  font-size: 3.2em;
+  text-align: center;
+  height: 0px;
+}
+
+.loginpage {
+  padding: 30px;
+  background-image: url("./Kiwi-Krawl-Day-4-101.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;  
+  /*background-position: -10px -50px;*/
+  width: 80%;
+  margin: 0 auto;
+  min-height: 1000px;
+}
+
+.loginFormArea{
+  margin: 80px auto;
+  padding:30px;
+  width: 400px;
+  background-color: rgba(80, 80, 100, 0.5);
+  
+}
+
+input, button {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-style: none;
+  padding:8px;
+  margin: 4px;
+}
+
+button {
+  background-color: #fff;
+  color:rgba(80, 80, 100, 1);
 }
