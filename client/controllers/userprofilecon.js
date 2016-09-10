@@ -11,8 +11,8 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   $scope.username = '';
 
   $scope.activityView = function () {
-    EventFactory.updateEvent(this.activity);
-    $location.path('activities');
+    console.log("inside usercontroler", this.activity.actname)
+    EventFactory.updateEvent(this.activity.actname);
   };
 
   $scope.addActivity = function () {
