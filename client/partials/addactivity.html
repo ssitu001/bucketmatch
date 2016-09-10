@@ -1,8 +1,10 @@
-<!--Enter text to filter activities-->
-  <input type='text' ng-model='filterBy' placeholder='Enter filter word'></input>
+<div class="actContainer">
+  <!--Enter text to filter activities-->
+    <input type='text' ng-model='filterBy' placeholder='Enter filter word'></input>
 
-<!--repeat is list of activity names-->
-<div class="list" ng-repeat="activity in events | filter: filterBy">
-  <!--clicking activity adds activity to current user's profile-->
-  <p ng-click="addMeToEvent()"> {{activity.actname}}</p> 
+  <!--repeat is list of activity names-->
+  <div class="list" ng-repeat="activity in events | filter: filterBy">
+    <!--clicking activity adds activity to current user's profile-->
+    <p ng-click="addMeToEvent()"> {{activity.actname}}</p> 
+  </div>
 </div>

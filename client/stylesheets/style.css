@@ -1,6 +1,4 @@
 /*In case sass doesn't work out*/
-/*font link for Titillium*/
-/*<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">*/
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin:0;
@@ -66,16 +64,36 @@ header {
   text-align: center;
 }
 
-.list, .desc {
+.list{
   margin: 0 auto;
   padding:4px;
   width: 300px;
 }
+.desc {
+  margin: 0 auto;
+  text-align: left;
+}
 
-.usercontainer {
+.usercontainer, .actContainer {
   width: 72%;
   margin: 60px auto;
   padding: 20px;
   background-color: rgba(250, 250, 250, 0.9);
   min-height: 500px;
+}
+
+.addDreamButton {
+  width: 100px;
+  margin: 5px auto;
+}
+
+.profilepic {
+  width: 150px;
+  float:right;
+  margin: 20px;
+}
+.profilepic img {
+    width:150px; /* you can use % */
+    height: auto;
+}
 }
