@@ -6,7 +6,6 @@ const sequelize = new Sequelize('horegyuy', 'horegyuy', 'YDEWOzNuQL9R8hViSAvrZD9
   dialect: 'postgres'
 });
 
-
 var User = sequelize.define('users', {
 	_id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true},
 	username: Sequelize.STRING,
@@ -33,9 +32,9 @@ User.belongsToMany(Activity, { through: 'useractivities'});
 // Sync all models that aren't already in the database
 sequelize.sync()
 // // Force sync all models
-sequelize.sync({force: true})
+// sequelize.sync({force: true})
 // // Drop all tables -- ran once 9/9 2:48pm
-sequelize.drop()
+// sequelize.drop()
 // emit handling:
 .then(function() {
   // woot woot
