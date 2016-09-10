@@ -1,8 +1,6 @@
 <div class="usercontainer">
   <header>
-    
     <h1>{{username | uppercase }}'s Bucket List</h1>
-    
   </header>
   <div class="profilepic" >
     <img ng-src={{image}} />
@@ -10,10 +8,7 @@
     <p ng-model='description'>Bio: {{description}}</p>
   </div>
   </div>
- 
- 
    <div class='list'>
-    
     <h3>Todo Dreams</h3>
     <div  ng-click='activityView()' ng-repeat='activity in activities'>
       <div class="listItems">
