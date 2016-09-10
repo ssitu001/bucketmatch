@@ -42,8 +42,27 @@ function conn(req, res, next){
       res.json(output);
     })
   }
+
+  function profile(req, res, next){
+	  console.log(req.params);
+	  User.findOne({where:{username: req.params.username }}, err => {
+    if (err) console.error(err);
+    })
+    .then(function(user){
+    
+      let userprofile = {"username": user.username, "profilepic": user.profilepic, "bio": user.bio};
+      console.log(userprofile);      
+      if (user === null){
+        res.status(500).send(null);
+      }
+      else { 
+        res.json(userprofile);
+      }
+      next();
+    });
+  }
   
   // next();
 
 
-module.exports = { index, add, show, conn };
+module.exports = { index, add, show, conn , profile};
