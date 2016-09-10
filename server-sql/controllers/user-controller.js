@@ -1,5 +1,4 @@
 "use strict"
-
 const database = require('../models/database');
 const pg = require('pg');
 
