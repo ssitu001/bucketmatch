@@ -1,6 +1,7 @@
 angular
   .module('UserFactory', [])
-  .factory('UserFactory', userFactory);
+  .factory('UserFactory', userFactory)
+
 
 function userFactory($http) {
   let userData = [];
@@ -11,7 +12,8 @@ function userFactory($http) {
   };
 
   userData.updateUser = function (data) {
+    console.log(data)
     user = data;
-  }
+  };
   return userData;
 }

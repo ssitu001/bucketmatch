@@ -1,6 +1,13 @@
 <!--login form-->
+<h2>Login</h2>
 <form ng-submit='login()'>
-  <input type="text" ng-model='username'></input>
-  <input type='text' ng-model='password'></input>
-  <button type='submit'></button>
+  <input type="text" ng-model='username' placeholder='username'></input>
+  <input type='text' ng-model='password' placeholder='password'></input>
+  <button type='submit'>Submit</button>
+</form>
+<h2>or create a new account</h2>
+<form nf-submit='newUser()'>
+  <input type="text" ng-model='username' placeholder='username'></input>
+  <input type='text' ng-model='password' placeholder='password'></input>
+  <button type='submit'>Submit</button>
 </form>

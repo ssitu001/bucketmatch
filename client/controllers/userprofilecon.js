@@ -7,6 +7,7 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   $scope.activities = [];
   $scope.completed = [];
   $scope.description = '';
+  $scope.username = '';
 
   $scope.activityView = function () {
     EventFactory.updateEvent(this.activity);
