@@ -29,5 +29,6 @@
     "sequelize": "^3.24.2"
   },
   "devDependencies": {
+    "http-server": "^0.9.0"
   }
 }
