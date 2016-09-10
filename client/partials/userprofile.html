@@ -6,19 +6,23 @@
   </header>
   <div class="profilepic" >
     <img ng-src={{image}} />
+     <div class='desc'>
+    <p ng-model='description'>Bio: {{description}}</p>
   </div>
-  <div class='list'>
+  </div>
+ 
+ 
+   <div class='list'>
     
     <h3>Todo Dreams</h3>
-    <div ng-click='activityView()' ng-repeat='activity in activities'>
+    <div  ng-click='activityView()' ng-repeat='activity in activities'>
+      <div class="listItems">
       {{activity.actname}}
+      </div>
   </div>
   <!--<div class='list'>
     <h3>Achieved Dreams</h3>
     <div ng-repeat="activity in completed">-->
-  </div>
-  <div class='desc'>
-    <p ng-model='description'>Bio: {{description}}</p>
   </div>
   <div class='addDreamButton'>
     <button ng-click="addActivity()">Add Dream</button>
