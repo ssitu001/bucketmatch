@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
 //if there is a password, make it the third parameter after the username; otherwise, make it null and include a comma after it
-const sequelize = new Sequelize('bucket', 'kate', 'null', {
-  host: 'localhost',
+const sequelize = new Sequelize('horegyuy', 'horegyuy', 'YDEWOzNuQL9R8hViSAvrZD9KIRxmMOYC', {
+  host: 'elmer-01.db.elephantsql.com',
   dialect: 'postgres'
 });
 
@@ -12,8 +12,6 @@ var User = sequelize.define('users', {
 	username: Sequelize.STRING,
 	profilepic: Sequelize.STRING,
   bio: Sequelize.STRING,
-  // createdAt: Sequelize.literal('NOW()'),
-  // updatedAt: Sequelize.literal('NOW()')
 }, {
   timestamp: false
 });
@@ -35,9 +33,9 @@ User.belongsToMany(Activity, { through: 'useractivities'});
 // Sync all models that aren't already in the database
 sequelize.sync()
 // // Force sync all models
-// sequelize.sync({force: true})
+sequelize.sync({force: true})
 // // Drop all tables -- ran once 9/9 2:48pm
-// sequelize.drop()
+sequelize.drop()
 // emit handling:
 .then(function() {
   // woot woot
