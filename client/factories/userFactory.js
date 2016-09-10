@@ -10,7 +10,6 @@ function userFactory($http) {
   let error = '';
 
   userData.fetch = function () {
-    console.log(user, password);
     return $http.get('http://localhost:3000/user/' + user + '/' + password);
   };
 
