@@ -23,9 +23,16 @@ function eventFactory($http) {
   };
 
   obj.addUserToEvent = function (data) {
-    data.userid = user;
-    console.log(data);
-    return $http.post('localhost:3000/useractivity/add', data);
+    data.userId = user;
+    const dataArr = [data];
+    console.log(dataArr);
+    const req = {
+      method: 'POST',
+      url: 'http://192.168.0.146:3000/useractivity/add',
+      headers: { 'Content-Type': undefined },
+      data: JSON.stringify(dataArr)
+    };
+    return $http.post('http://192.168.0.146:3000/useractivity/add', JSON.stringify({ data: dataArr }));
   };
   return obj;
 }

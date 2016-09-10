@@ -25,8 +25,9 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
         UserFactory.error('Sorry incorrect username or password.  Please try again')
         $location.path('/');
       }
+      console.log(data.data.activities);
       $scope.image = data.data.user.profilepic;
-      $scope.activities = data.activities;
+      $scope.activities = data.data.activities;
       $scope.completed = '';
       $scope.description = data.data.user.bio;
       $scope.userid= data.data.user._id;

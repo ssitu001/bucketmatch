@@ -29,7 +29,7 @@ function activitiescontroller($scope, $location, EventFactory, UserFactory) {
   }
 
   $scope.addMeToEvent = function () {
-    EventFactory.addUserToEvent({ "activityid": this.activity._id });
+    EventFactory.addUserToEvent({ "activityId": this.activity._id });
   };
   loadActivities();
 }
