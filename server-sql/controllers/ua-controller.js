@@ -1,3 +1,5 @@
+"use strict";
+
 const database = require('../models/database');
 const sequelize = database.sequelize;
 const UserActivity = database.UserActivity;
