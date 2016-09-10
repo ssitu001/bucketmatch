@@ -14,7 +14,6 @@ function userFactory($http) {
   };
 
   userData.updateUser = function (person, pass) {
-    console.log(person, pass);
     user = person;
     password = pass;
   };
