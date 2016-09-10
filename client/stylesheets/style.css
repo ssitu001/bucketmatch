@@ -90,12 +90,28 @@ header {
   min-height: 500px;
 }
 
+<<<<<<< HEAD
 .actContainer a {
   font-size: 1.4em;
   color: black;
   text-decoration: none;
 }
 
+=======
+/*.actContainer{
+  background-image: url("http://www.cfau-pd.net/images/adventure-wallpapers/adventure-wallpapers-12.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;  
+  /*background-position: -10px -50px;*/
+  /*width: 80%;
+  margin: 0 auto;
+  min-height: 1000px;*/
+.inspopic{
+  background-image: url("https://storyoflifeandadventures.files.wordpress.com/2012/01/peter-pan-in-belize1.jpg")
+  background-size: cover;
+  height: 20%;
+}
+>>>>>>> d548f067ede39113de68f38b035c867810317198
 .addDreamButton {
   width: 100px;
   margin: 5px auto;
@@ -119,4 +135,5 @@ header {
   height: 390px;
   background-image: url("https://storyoflifeandadventures.files.wordpress.com/2012/01/peter-pan-in-belize1.jpg");
   background-size: cover;
+
 }
