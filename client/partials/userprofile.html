@@ -1,19 +1,21 @@
-<header>
-  <img ng-src={{image}} />
-  <h1>{{username}}'s Bucket List</h1>
-</header>
-<div class='list'>
-  <h3>Todo Dreams</h3>
-  <div ng-click='activityView()' ng-repeat='activity in activities'>
-    {{activity.actname}}
-</div>
-<div class='list'>
-  <h3>Achieved Dreams</h3>
-  <div ng-repeat="activity in completed">
-</div>
-<div class='desc'>
-  <p ng-model='description'>{{description}}</p>
-</div>
-<div >
-  <button ng-click="addActivity()">Add Dream</button>
+<div class="usercontainer">
+  <header>
+    <img ng-src={{image}} />
+    <h1>{{username | uppercase }}'s Bucket List</h1>
+  </header>
+  <div class='list'>
+    <h3>Todo Dreams</h3>
+    <div ng-click='activityView()' ng-repeat='activity in activities'>
+      {{activity.actname}}
+  </div>
+  <div class='list'>
+    <h3>Achieved Dreams</h3>
+    <div ng-repeat="activity in completed">
+  </div>
+  <div class='desc'>
+    <p ng-model='description'>Bio: {{description}}</p>
+  </div>
+  <div >
+    <button ng-click="addActivity()">Add Dream</button>
+  </div>
 </div>

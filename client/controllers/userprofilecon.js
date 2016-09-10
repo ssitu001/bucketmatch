@@ -8,6 +8,7 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   $scope.completed = [];
   $scope.description = '';
   $scope.userid = '';
+  $scope.username = '';
 
   $scope.activityView = function () {
     EventFactory.updateEvent(this.activity);
@@ -31,6 +32,7 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
       $scope.completed = '';
       $scope.description = data.data.user.bio;
       $scope.userid= data.data.user._id;
+      $scope.username = data.data.user.username;
     });
   }
   loadPage();
