@@ -4,10 +4,10 @@ angular
 
 function userFactory($http) {
   let userData = [];
-  let user = '';
+  let user = '1';
 
   userData.fetch = function () {
-    return $http.get(ADDURL + '?user=' + user);
+    return $http.get('http://localhost:3000/user/' + user);
   };
 
   userData.updateUser = function (data) {
