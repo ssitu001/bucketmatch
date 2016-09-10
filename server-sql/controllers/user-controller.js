@@ -21,7 +21,7 @@ function add(req, res, next) {
 //to get a single user's profile'
 function show(req, res, next) {
 	console.log(req.params);
-	User.findOne({where:{_id: Number(req.params.id)}}, err => {
+	User.findOne({where:{username: req.params.username}}, err => {
     if (err) console.error(err);
   }).then(function(user){
     res.json(user);

@@ -1,6 +1,6 @@
 angular
-  .module('ActivitiesController', ['ngRoute', 'EventFactory', 'ActivityFactory', 'UserFactory'])
-  .controller('activitiescontroller', ['$scope', '$location']);
+  .module('ActivitiesController', ['ngRoute', 'EventFactory', 'UserFactory'])
+  .controller('activitiescontroller', activitiescontroller);
 
 function activitiescontroller($scope, $location, EventFactory, UserFactory) {
   // use fetch from eventFactory that gets all users info.

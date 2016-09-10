@@ -1,6 +1,6 @@
 angular
   .module('EventFactory', [])
-  .controller('EventFactory', eventFactory)
+  .factory('EventFactory', eventFactory)
 
 function eventFactory($http) {
   let event = '';

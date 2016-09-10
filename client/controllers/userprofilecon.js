@@ -19,11 +19,12 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
   };
 
   function loadPage() {
-    UserFactory.fetch().then((req, res) => {
-      $scope.image = res.body[0].image;
-      $scope.activities = ?;
-      $scope.completed = ?;
-      $scope.description = res.body[0].desc;
+    UserFactory.fetch().then((data) => {
+      console.log(data);
+      $scope.image = data.data.profilepic;
+      $scope.activities = '';
+      $scope.completed = '';
+      $scope.description = data.data.bio;
     })
   }
   loadPage();

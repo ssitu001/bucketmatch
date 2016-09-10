@@ -1,10 +1,10 @@
 angular
   .module('UserFactory', [])
-  .controller('UserFactory', userFactory)
+  .factory('UserFactory', userFactory);
 
 function userFactory($http) {
   let userData = [];
-  let user = '1';
+  let user = 'bnbjknb';
 
   userData.fetch = function () {
     return $http.get('http://localhost:3000/user/' + user);
