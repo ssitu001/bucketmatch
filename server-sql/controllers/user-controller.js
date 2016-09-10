@@ -18,5 +18,13 @@ function add(req, res, next) {
   });
   next();
 }
+//to get a single user's profile'
+function show(req, res, next) {
+	console.log(req.body);
+	// User.create(req.body[0], err => {
+  //   if (err) console.error(err);
+  // });
+  next();
+}
 
-module.exports = { index, add };
+module.exports = { index, add, show };
