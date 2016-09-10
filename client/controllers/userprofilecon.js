@@ -21,7 +21,10 @@ function usercontroller($scope, $location, $http, EventFactory, UserFactory) {
 
   function loadPage() {
     UserFactory.fetch().then((data) => {
-      console.log(data);
+      if (data === null) {
+        UserFactory.error('Sorry incorrect username or password.  Please try again')
+        $location.path('/');
+      }
       $scope.image = data.data.profilepic;
       $scope.activities = '';
       $scope.completed = '';

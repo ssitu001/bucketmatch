@@ -3,23 +3,24 @@ angular
   .factory('EventFactory', eventFactory)
 
 function eventFactory($http) {
+  let obj = {};
   let event = '';
   let user = '';
 
-  event.updateEvent = function (data) {
+  obj.updateEvent = function (data) {
     event = data;
   };
-  event.updateUser = function (data) {
+  obj.updateUser = function (data) {
     user = data;
   };
 
-  event.fetchUsers = function () {
+  obj.fetchUsers = function () {
     return $http.get(ADDURL + '?activity=' + event)
   };
 
-  event.fetchActivities = function () {
+  obj.fetchActivities = function () {
     return $http.get(ADDURL + '?search=' + user);
   };
 
-  return event;
+  return obj;
 }

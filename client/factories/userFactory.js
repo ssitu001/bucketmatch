@@ -5,15 +5,27 @@ angular
 
 function userFactory($http) {
   let userData = [];
-  let user = 'bnbjknb';
+  let user = '';
+  let password = '';
+  let error = '';
 
   userData.fetch = function () {
-    return $http.get('http://localhost:3000/user/' + user);
+    console.log(user, password);
+    return $http.get('http://localhost:3000/user/' + user + '/' + password);
   };
 
-  userData.updateUser = function (data) {
-    console.log(data)
-    user = data;
+  userData.updateUser = function (person, pass) {
+    console.log(person, pass);
+    user = person;
+    password = pass;
   };
+
+  userData.error = function (data) {
+    $scope.error = data;
+  };
+
+  userData.createNew = function (data) {
+    return $http.post(ADDURL + data);
+  }
   return userData;
 }
