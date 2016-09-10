@@ -1,19 +1,19 @@
 angular
-  .module('MatchController', ['ngRoute', 'EventFactory'])
+  .module('MatchController', ['ngRoute', 'EventFactory', 'ClickedFactory'])
   .controller('MatchController', MatchController);
 
-  function MatchController($location, $scope, EventFactory) {
-    $scope.users;
-      // get's other user's profile when you click on the user
-  function getOtherUsers() {
-    // use userFactory updateUser to get data
+function MatchController($location, $scope, EventFactory, ClickedFactory) {
+  $scope.users;
+  function getOtherUsers() { // get's other user's for clicked event
     EventFactory.fetchMatches()
-      .then(function(res) {
-        console.log("res inside match", res)
-        $scope.users = res.data.users;
-      })
-  };
+    .then((res) => {
+      $scope.users = res.data.users;
+    });
+  }
   getOtherUsers();
 
-
+  $scope.GetClickedUser = function () {
+    ClickedFactory.setUser(this.user.username);
   };
+}
+
