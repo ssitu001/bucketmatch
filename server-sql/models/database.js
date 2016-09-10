@@ -11,6 +11,7 @@ var User = sequelize.define('users', {
 	username: Sequelize.STRING,
 	profilepic: Sequelize.STRING,
   bio: Sequelize.STRING,
+  password:Sequelize.STRING,
 }, {
   timestamp: false
 });

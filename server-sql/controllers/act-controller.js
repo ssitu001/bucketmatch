@@ -1,6 +1,7 @@
 const database = require('../models/database');
 const sequelize = database.sequelize;
 const Activity = database.Activity;
+const UserActivity = require('./ua-controller.js');
 
 function index(req, res) {
 	// var options = {};
