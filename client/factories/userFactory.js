@@ -12,6 +12,7 @@ function userFactory($http) {
   };
 
   userData.updateUser = function (data) {
+    console.log(data)
     user = data;
   };
   return userData;
