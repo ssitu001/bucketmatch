@@ -11,14 +11,15 @@ function index(req, res) {
 	//displays all activities associated with users?
 	UserActivity.findAll({}).then(function(uas) {
   	var indexArr = uas.map(function(e){return e.dataValues})
-  	console.log(uas);
+  	// console.log(uas);
   	res.json(uas);
 	});
 }
 
 function add(req, res, next) {
-	console.log(req.body);
-	UserActivity.create(req.body[0], err => {
+	// console.log(req.body);
+	
+	UserActivity.create(req.body.data[0], err => {
     if (err) console.error(err);
   });
   next();
