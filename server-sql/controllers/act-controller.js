@@ -1,31 +1,31 @@
 const database = require('../models/database');
 const sequelize = database.sequelize;
-const User = database.User;
+const Activity = database.Activity;
 
 function index(req, res) {
 	// var options = {};
 	// options.where = req.query;
-	User.findAll({}).then(function(users) {
-  	var indexArr = users.map(function(e){return e.dataValues})
-  	console.log(users);
-  	res.json(users);
+	Activity.findAll({}).then(function(acts) {
+  	var indexArr = acts.map(function(e){return e.dataValues})
+  	console.log(acts);
+  	res.json(acts);
 	});
 }
 
 function add(req, res, next) {
 	console.log(req.body);
-	User.create(req.body[0], err => {
+	Activity.create(req.body[0], err => {
     if (err) console.error(err);
   });
   next();
 }
-//to get a single user's profile'
+
 function show(req, res, next) {
-	console.log(req.body);
-	// User.create(req.body[0], err => {
+	// console.log(req.body);
+	// Activity.create(req.body[0], err => {
   //   if (err) console.error(err);
   // });
   next();
 }
 
-module.exports = { index, add, show };
+module.exports = { index, add, show};
