@@ -14,7 +14,7 @@ function ClickedFactory($location, $http) {
 
   userInfo.getInfo = function () {
     console.log('in clickedFactory', clicked);
-    $http.get('http://localhost:3000/user/' + clicked);
+    $http.get('http://localhost:3000/userinfo/' + clicked);
   };
   return userInfo;
 }

@@ -1,6 +1,6 @@
 const App = angular
-  .module('myApp', ['ngRoute', 'UserProfileController', 'ActivitiesController',
-    'LoginController', 'MatchController', 'ContactController', 'EventFactory', 'UserFactory']
+  .module('myApp', ['ngRoute', 'UserProfileController', 'ActivitiesController', 'notFoundActController',
+    'LoginController', 'MatchController', 'ContactController', 'EventFactory', 'UserFactory', 'ClickedFactory']
 );
 
 App.config(configFunction);
@@ -23,8 +23,12 @@ function configFunction($routeProvider, $locationProvider) {
       templateUrl: './partials/addactivity.html',
       controller: 'ActivitiesController',
     })
-    .when('/addActivity', {
-      templateUrl: './partials/contact.html',
+    .when('/contact', {
+      templateUrl: './partials/contactView.html',
       controller: 'ContactController',
+    })
+    .when('/createnew', {
+      templateUrl: './partials/createactivity.html',
+      controller: 'notFoundActController',
     });
 }
