@@ -23,6 +23,9 @@ app.get('/useractivities', uaCtrl.index, (req, res) => { res.end() });//to view 
 app.post('/useractivity/add', uaCtrl.add, (req, res) => { res.end() });//to add a new activity TO a User
 // app.put('/useractivity/close', uaCtrl.close, (req, res) => {res.end() }); // to mark activity as done
 
+app.get('/activity/', uaCtrl.add, (req, res) => { res.end() });//to add a new activity TO a User
+
+
 app.use(express.static(path.join(__dirname + '/client/')));
 
 app.listen(3000, () => {
