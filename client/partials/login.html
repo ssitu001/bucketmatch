@@ -1,16 +1,18 @@
 <!--login form-->
 <div class="loginpage">
-  <h2>Login</h2>
-  <p ng-model='error'>{{error}}</p>
-  <form ng-submit='login()'>
-    <input type="text" ng-model='username' placeholder='username'></input>
-    <input type='password' ng-model='password' placeholder='password'></input>
-    <button type='submit'>Submit</button>
-  </form>
-  <h2>or create a new account</h2>
-  <form nf-submit='newUser()'>
-    <input type="text" ng-model='NewUsername' placeholder='username'></input>
-    <input type='password' ng-model='NewPassword' placeholder='password'></input>
-    <button type='submit'>Submit</button>
-  </form>
+  <div class="loginFormArea">
+    <h2>Login</h2>
+    <p ng-model='error'>{{error}}</p>
+    <form ng-submit='login()'>
+      <input type="text" ng-model='username' placeholder='username'></input>
+      <input type='password' ng-model='password' placeholder='password'></input>
+      <button type='submit'>Submit</button>
+    </form>
+    <h2>Create a new account</h2>
+    <form nf-submit='newUser()'>
+      <input type="text" ng-model='NewUsername' placeholder='username'></input>
+      <input type='password' ng-model='NewPassword' placeholder='password'></input>
+      <button type='submit'>Submit</button>
+    </form>
+  </div>
 </div>
