@@ -90,6 +90,12 @@ header {
   min-height: 500px;
 }
 
+.actContainer a {
+  font-size: 1.4em;
+  color: black;
+  text-decoration: none;
+}
+
 .addDreamButton {
   width: 100px;
   margin: 5px auto;
@@ -106,4 +112,11 @@ header {
 }
 .listItems{
   padding: 10px;
+}
+
+.inspopic{
+  margin: 0 auto;
+  height: 390px;
+  background-image: url("https://storyoflifeandadventures.files.wordpress.com/2012/01/peter-pan-in-belize1.jpg");
+  background-size: cover;
 }
