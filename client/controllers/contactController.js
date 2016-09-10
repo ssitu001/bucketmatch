@@ -8,7 +8,6 @@ function contactController($scope, ClickedFactory) {
   $scope.image = '';
 
   function pageLoad() {
-    console.log('in pageload', username)
     ClickedFactory.getInfo()
       .then((res) => {
         $scope.username = res.data.username;
