@@ -45,8 +45,5 @@ sequelize.sync()
   // whooops
 })
 
-<<<<<<< HEAD
-module.exports = { sequelize: sequelize, User: User }
-=======
 	module.exports = {sequelize: sequelize, User: User, Activity:Activity, UserActivity:UserActivity}
->>>>>>> sneakykate-database
+
