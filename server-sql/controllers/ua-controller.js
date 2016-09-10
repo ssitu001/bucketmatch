@@ -26,6 +26,7 @@ function show(req, res, next) {
 	// Activity.create(req.body[0], err => {
   //   if (err) console.error(err);
   // });
+	
   next();
 }
 

@@ -32,13 +32,6 @@ var UserActivity = sequelize.define('useractivities', {
 Activity.belongsToMany(User, { through: 'useractivities'});
 User.belongsToMany(Activity, { through: 'useractivities'});
 
-// var Match = sequelize.define('match', {
-// 	_id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true},
-// 	userid: Sequelize.INTEGER,
-// 	actid: Sequelize.INTEGER,
-// });
-// Activities: Activities, Match: Match
-
 // Sync all models that aren't already in the database
 sequelize.sync()
 // // Force sync all models

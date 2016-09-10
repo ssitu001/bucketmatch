@@ -11,7 +11,6 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/build/bundle.js');
 })
 
-
 app.get('/user/:id', userCtrl.show); //to get a single user's profile'
 app.get('/test', userCtrl.index); //full list of users, not needed for front-end
 app.post('/user/add', userCtrl.add, (req, res) => { res.end() });//to add a single user
