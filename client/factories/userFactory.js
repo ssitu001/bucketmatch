@@ -2,7 +2,6 @@ angular
   .module('UserFactory', [])
   .factory('UserFactory', userFactory)
 
-
 function userFactory($http) {
   let userData = [];
   let user = '';

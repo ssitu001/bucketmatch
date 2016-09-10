@@ -17,7 +17,6 @@ function add(req, res, next) { // create a new user record
   next();
 }
 
-
 function show(req, res, next) { // to get the logged in user's profile'
   User.findOne({ where: { username: req.params.username, password: req.params.password } }, err => {
     if (err) console.error(err);
@@ -56,6 +55,5 @@ function profile(req, res, next) {
     next();
   });
 }
-
 
 module.exports = { index, add, show, conn, profile };
