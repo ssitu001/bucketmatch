@@ -1,35 +1,32 @@
-"use strict";
-
 const database = require('../models/database');
-const sequelize = database.sequelize;
-const Activity = database.Activity;
 const UserActivity = require('./ua-controller.js');
 
-function index(req, res) {
-	// var options = {};
-	// options.where = req.query;
-	Activity.findAll({}).then(function(acts) {
-  	var indexArr = acts.map(function(e){return e.dataValues})
-  	console.log(acts);
-  	res.json(acts);
-	});
+const sequelize = database.sequelize;
+const Activity = database.Activity;
+
+function index(req, res) { // retruns a list of all activities
+  Activity.findAll({}).then((acts) => {
+    res.json(acts);
+  });
 }
 
-function add(req, res, next) {
-	console.log(req.body);
-	Activity.create(req.body[0], err => {
+function add(req, res, next) { // adds a new activity to the database
+  Activity.create(req.body.data[0])
+    .then((resp) => {
+      console.log(resp);
+      req.actKey = resp.dataValues._id;
+    })
+    .catch((err) => {
+      if (err) console.error(err);
+    });
+  next();
+}
+
+function show(req, res, next) { // finds a single activity
+  Activity.find(req.body[0], err => {
     if (err) console.error(err);
   });
   next();
 }
 
-function show(req, res, next) {
-	console.log(req.body);
-	Activity.find(req.body[0], err => {
-    if (err) console.error(err);
-  });
-	
-  next();
-}
-
-module.exports = { index, add, show};
+module.exports = { index, add, show };
