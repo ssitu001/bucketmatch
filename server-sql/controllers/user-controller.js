@@ -19,15 +19,19 @@ function add(req, res, next) {
   });
   next();
 }
+
 //to get a single user's profile'
 function show(req, res, next) {
 	console.log(req.params);
-	User.findOne({where:{username: req.params.username }}, err => {
+	User.findOne({where:{username: req.params.username, password: req.params.password}}, err => {
     if (err) console.error(err);
   })
   .then(function(user){
-    req.user = user;
-    next();
+    if (user === null){
+      res.status(500).send(null);
+    }
+    else { req.user = user;
+    }    next();
   });
   
 }
