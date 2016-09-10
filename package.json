@@ -18,15 +18,14 @@
   "homepage": "https://github.com/sneakykate/bucketmatch#readme",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "fs": "0.0.1-security",
     "nodemon": "^1.10.2",
+    "path": "^0.12.7",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0",
     "sequelize": "^3.24.2"
   },
   "devDependencies": {

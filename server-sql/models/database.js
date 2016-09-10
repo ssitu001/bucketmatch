@@ -18,19 +18,19 @@ var User = sequelize.define('users', {
   timestamp: false
 });
 
-// var Activities = sequelize.define('activities', {
-// 	_id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true},
-// 	id: Sequelize.INTEGER,
-// 	actname: Sequelize.STRING,
-// 	actdesc: Sequelize.STRING,
-// });
+var Activity = sequelize.define('activities', {
+	_id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true},
+	actname: Sequelize.STRING,
+	actdesc: Sequelize.STRING,
+});
 
-// var Match = sequelize.define('match', {
-// 	_id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true},
-// 	userid: Sequelize.INTEGER,
-// 	actid: Sequelize.INTEGER,
-// });
-// Activities: Activities, Match: Match
+var UserActivity = sequelize.define('useractivities', {
+  _id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement:true },
+  status: Sequelize.BOOLEAN, // if open, true, if completed false
+});
+
+Activity.belongsToMany(User, { through: 'useractivities'});
+User.belongsToMany(Activity, { through: 'useractivities'});
 
 // Sync all models that aren't already in the database
 sequelize.sync()
@@ -45,4 +45,5 @@ sequelize.sync()
   // whooops
 })
 
-module.exports = { sequelize: sequelize, User: User }
+	module.exports = {sequelize: sequelize, User: User, Activity:Activity, UserActivity:UserActivity}
+

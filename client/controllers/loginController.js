@@ -1,8 +1,8 @@
 angular
   .module('LoginController', ['ngRoute', 'UserFactory'])
-  .controller('LoginController', loginController)
+  .controller('LoginController', LoginController)
 
-function loginController($scope, $location, UserFactory) {
+function LoginController($location, $scope, UserFactory) {
   $scope.login = function () {
     UserFactory.updateUser(this.username);
     $location.path('profile');

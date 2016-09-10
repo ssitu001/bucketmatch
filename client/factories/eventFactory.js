@@ -1,6 +1,6 @@
 angular
   .module('EventFactory', [])
-  .controller('EventFactory', eventFactory)
+  .factory('EventFactory', eventFactory)
 
 function eventFactory($http) {
   let event = '';
@@ -17,8 +17,8 @@ function eventFactory($http) {
     return $http.get(ADDURL + '?activity=' + event)
   };
 
-  event.fetchActivities = function (data) {
-    return $http.get(ADDURL + '?search=' + data)
+  event.fetchActivities = function () {
+    return $http.get(ADDURL + '?search=' + user);
   };
 
   return event;

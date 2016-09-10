@@ -1,3 +1,5 @@
-angular
-  .module(ActivityFactory, [])
-  .factory('ActivityFactory', ActivityFactory)
+// angular
+//   .module(ActivityFactory, [])
+//   .factory('ActivityFactory', ActivityFactory)
+
+//   function ActivityFacto
