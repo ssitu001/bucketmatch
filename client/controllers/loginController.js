@@ -13,5 +13,5 @@ function LoginController($location, $scope, UserFactory) {
   $scope.newUser = function () {
     UserFactory.updateUser(this.NewUsername, this.NewPassword);
     $location.path('NewProfile');
-  }
+  };
 }
