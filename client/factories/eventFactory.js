@@ -2,14 +2,28 @@ angular
   .module('EventFactory', [])
   .factory('EventFactory', eventFactory)
 
-function eventFactory($http) {
+function eventFactory($http, $location) {
   let obj = {};
   let event = '';
   let user = '';
+  let matchAct;
+
+
+
 
   obj.updateEvent = function (data) {
+    console.log("event before", event)
     event = data;
+    console.log("event",event)
+    $location.path('activities');
+
   };
+
+  obj.fetchMatches = function() {
+    console.log("inside the fetch", event)
+    return $http.get('http://localhost:3000/useractivity/findbyact/' + event);
+  }
+
   obj.updateUser = function (data) {
     user = data;
   };
