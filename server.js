@@ -12,7 +12,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/client/index.html');
 })
 
-app.get('/user/:username', userCtrl.show, userCtrl.conn); //to get a single user's profile'
+app.get('/user/:username/:password', userCtrl.show, userCtrl.conn); //to get a single user's profile'
 // app.get('/someshit/', userCtrl.conn); //to get a single user's profile'
 
 app.get('/test', userCtrl.index); //full list of users, not needed for front-end

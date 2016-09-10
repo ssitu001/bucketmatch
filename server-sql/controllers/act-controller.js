@@ -22,10 +22,11 @@ function add(req, res, next) {
 }
 
 function show(req, res, next) {
-	// console.log(req.body);
-	// Activity.create(req.body[0], err => {
-  //   if (err) console.error(err);
-  // });
+	console.log(req.body);
+	Activity.find(req.body[0], err => {
+    if (err) console.error(err);
+  });
+	
   next();
 }
 
