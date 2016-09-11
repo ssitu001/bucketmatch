@@ -35,4 +35,4 @@ function findbyact(req, res, next) { // finds all users by activity
   });
 }
 
-module.exports = { index, add, show, findbyact };
+module.exports = { index, add, findbyact };
