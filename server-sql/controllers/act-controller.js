@@ -11,7 +11,8 @@ function index(req, res) { // retruns a list of all activities
 }
 
 function add(req, res, next) { // adds a new activity to the database
-  Activity.create(req.body.data[0])
+  console.log("inside act", req.body)
+  Activity.create(req.body.data.event)
     .then((resp) => {
       console.log(resp);
       req.actKey = resp.dataValues._id;
